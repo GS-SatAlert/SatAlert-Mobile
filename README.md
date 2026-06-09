@@ -12,12 +12,14 @@ hospedada no Railway. Sem dados mock: todas as telas consomem a API real.
 
 ## 👥 Integrantes do Grupo
 
-Nome - RM - Turma
-Andrei de Paiva Gibbini	- 563061	- 2TDSPF
-Pedro Sakai Silva Zambaca - 565956 - 2TDSPF
-Pedro Santos Pequini	- 561842	- 2TDSPF
-Arthur Câmara - 562310 - 2TDSPG
-Diogo Cunha - 563654	- 2TDSPF
+| Nome | RM | Turma |
+|---|---|---|
+| Andrei de Paiva Gibbini | 563061 | 2TDSPF |
+| Arthur Câmara | 562310 | 2TDSPG |
+| Diogo Cunha | 563654 | 2TDSPF |
+| Pedro Santos Pequini | 561842 | 2TDSPF |
+| Pedro Sakai Silva Zambaca | 565956 | 2TDSPF |
+
 
 ## 📽️ Vídeo de Demonstração
 
