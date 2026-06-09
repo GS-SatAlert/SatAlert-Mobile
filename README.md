@@ -21,7 +21,7 @@ Diogo Cunha - 563654	- 2TDSPF
 
 ## 📽️ Vídeo de Demonstração
 
-🎬 [Assista no YouTube]
+🎬 [Assista no YouTube] Link do vídeo: https://youtu.be/eICsxv7anN0
 
 ---
 
