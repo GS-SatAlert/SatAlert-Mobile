@@ -109,38 +109,6 @@ risco do app (`SEGURO` → verde).
 
 ---
 
-## 🧩 O que mudou para integrar com a API real
-
-A versão inicial assumia uma API genérica de "alertas" (`/api/alertas` com título,
-descrição, lat/long e severidade manual). A API real é diferente, então os
-seguintes ajustes foram feitos (todos **apenas no app mobile** — a API Java e o
-banco não foram tocados):
-
-1. **`api.js` reescrito** — `BASE_URL` de produção, interceptor que injeta o JWT
-   automaticamente, tratamento de `401`, helper de paginação (`extractContent`) e
-   services separados para `auth`, `ocorrencias`, `regioes` e `usuarios`.
-2. **`mappers.js` (novo)** — traduz o modelo da API (ocorrência/região + enums)
-   para o modelo de exibição do app.
-3. **Login/Cadastro reais** — login via `POST /auth/login`; cadastro via
-   `POST /auth/registro` seguido de login automático (a API não devolve token no
-   registro). O campo "Órgão" virou **Telefone**, que é o que a API aceita.
-4. **Nova Ocorrência reescrita** — em vez de título/descrição/coordenadas, agora
-   tem: seletor de **tipo** (queimada/desmatamento), seletor de **região** (buscada
-   da API) e os **campos de métrica** que a API espera. O nível de risco é
-   calculado pela API.
-5. **"Editar" virou "Resolver"** — a API não permite editar todos os campos de uma
-   ocorrência; a única alteração possível é marcá-la como resolvida
-   (`PATCH /resolver`). Lista e Detalhe refletem isso.
-6. **Tela de Regiões (nova) + CRUD completo** — necessária porque criar uma
-   ocorrência exige uma região (`idRegiao`), e é onde ficam os fluxos de
-   **Create/Update/Delete** completos.
-7. **Perfil real** — carrega o usuário logado e exibe **estatísticas reais**
-   (contagem de ocorrências, ativas e regiões) vindas da API; logout limpa a sessão.
-8. **Mock removido** — `mockData.js` foi excluído; nenhuma tela depende mais de
-   dados falsos.
-
----
-
 ## 📱 Telas (8)
 
 | # | Tela | Função | API |
